@@ -1,0 +1,54 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: server1
+    owner: developer
+  name: server1
+spec:
+  containers:
+  - image: nginx
+    name: server1
+    ports:
+    - containerPort: 80
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: server2
+    owner: developer
+  name: server2
+spec:
+  containers:
+  - image: nginx
+    name: server2
+    ports:
+    - containerPort: 80
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: server3
+    owner: developer
+  name: server3
+spec:
+  containers:
+  - image: nginx
+    name: server3
+    ports:
+    - containerPort: 80
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
